@@ -1,9 +1,12 @@
 import React from 'react';
+import ThemeContext from './ThemeContext';
 
 function HeaderButton() {
+  const themeObject = React.useContext(ThemeContext)
+
   return (
     <div>
-      <button>Press me</button>
+      <button className={themeObject}>Press me</button>
     </div>
   );
 }
